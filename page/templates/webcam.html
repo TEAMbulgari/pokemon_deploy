@@ -110,8 +110,9 @@
            url : '/canvasToImage/',
            data: {data: data},
            success: function(result){
+               console.log("done");
                var filename = result['filename'];
-               window.location.href = "../show";
+               window.location.href = "https://pokemon-like-me.herokuapp.com/show";
            },
            error: function(e){alert("에러");}
        });

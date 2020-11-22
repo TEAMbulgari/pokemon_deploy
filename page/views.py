@@ -10,7 +10,7 @@ from PIL import Image
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 import numpy as np
-import os
+import os, shutil
 
 
 # Create your views here.
@@ -27,6 +27,7 @@ def upload(request):
         rm_file = media_dir + 'test.jpg'
         if os.path.isfile(rm_file):
             os.remove(rm_file)
+
         fs = FileSystemStorage(location=media_dir)
         fs.save(upload_file.name, upload_file)
         os.rename(media_dir + fullname, media_dir + 'test.jpg')
