@@ -1,0 +1,54 @@
+<!--메인에 접속했을 때 보이는 화면, 파일 업로드 OR 직접 웹캠 촬영 버튼-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    {% load static %}
+    <link rel="stylesheet" href ="{% static 'css/styles.css' %}">
+    <title>Pokemon</title>
+</head>
+<body>
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">나와 닮은 포켓몬은?</a>
+
+            </div>
+        </nav>
+    <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <h1 class="masthead-heading text-uppercase mt-0 mb-5">너.. 약간 그 포켓몬 닮은 것 같은데?</h1>
+                <div class="float-right">
+                    <img class="masthead-avatar mb-4" id ="cam" src="../static/css/img/pokemon-trainer.svg" alt="" onclick="location.href = '/cam'"/>
+                    <img class="masthead-avatar mb-4" id = "file" src="../static/css/img/camera.png" alt="" onclick="location.href = '/upload'"/>
+                </div>
+                <!-- Masthead Heading-->
+
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="font-weight-light mb-2">배포용 버전입니다.</p>
+                <p class="masthead-subheading font-weight-light mb-0">Developed By Bulgari</p>
+            </div>
+        </header>
+
+</body>
+</html>
