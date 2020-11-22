@@ -20,8 +20,8 @@
     <link rel="stylesheet" href ="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <title>닮은 포켓몬 찾기</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
     <style>
         body{
@@ -112,7 +112,7 @@
            success: function(result){
                console.log("done");
                var filename = result['filename'];
-               window.location.href = "https://pokemon-like-me.herokuapp.com/show";
+               window.location.href = "../show";
            },
            error: function(e){alert("에러");}
        });
