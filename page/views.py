@@ -28,13 +28,9 @@ def upload(request):
         if os.path.isfile(rm_file):
             os.remove(rm_file)
 
-        copy_file = 'static/test.jpg'
-        if os.path.isfile(copy_file):
-            os.remove(copy_file)
         fs = FileSystemStorage(location=media_dir)
         fs.save(upload_file.name, upload_file)
         os.rename(media_dir + fullname, media_dir + 'test.jpg')
-        shutil.copy(media_dir+'/test.jpg', 'static/test.jpg')
         r, p = getResult()
         return render(request, 'show.html',{'result':r, 'prob':p*100, 'MEDIA_URL':settings.MEDIA_URL})
     return render(request, 'upload.html')
