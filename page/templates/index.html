@@ -7,6 +7,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
+    {% load static %}
+    <link rel="stylesheet" href ="{% static 'css/styles.css' %}">
+
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -15,9 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    {% load staticfiles %}
-    <link rel="stylesheet" href ="{% static 'css/styles.css' %}">
-    <title>Pokemon</title>
+
+    <title>닮은 포켓몬 찾기</title>
 </head>
 <body>
 <!-- Navigation-->

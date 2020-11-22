@@ -29,4 +29,4 @@ urlpatterns = [
     path('canvasToImage/', pageView.canvasToImage, name='canvasToImage'),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, insecure=True)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
